@@ -464,17 +464,17 @@ h3{
     width: 100%;
     margin-top: 50px;
 }
-.project-link {
+.project-card-link {
     text-decoration: none !important;
     color: inherit;
     display: block;
     width: 100%;
 }
-.project-link:hover .project-card {
+.project-card-link:hover .project-card {
     transform: translateY(-5px);
     box-shadow: 1px 12px 20px 5px var(--first-shadow-color);
 }
-.project-link img {
+.project-card-link img {
     border: none;
     outline: none;
 }
