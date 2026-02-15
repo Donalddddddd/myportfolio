@@ -513,7 +513,7 @@ h3{
     border: none;
     outline: none;
 }
-hidden-project {
+.hidden-project {
     display: none;
 }
 .projects-container {
