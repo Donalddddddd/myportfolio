@@ -27,6 +27,7 @@ function headerShadow(){
  
 
         navLogo.style.color = "rgb(250, 250, 250)";
+        navMenu.background.color = "rgb(250, 250, 250)";
   
 
         navLinks.forEach(link => {
