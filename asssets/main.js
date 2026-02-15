@@ -190,9 +190,6 @@ function toggleProjects() {
             project.style.display = "none";
         });
         btn.innerText = "Show More";
-        
-        // Optional: Scroll back up to the project section when hiding
-        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
     }
 }
 
