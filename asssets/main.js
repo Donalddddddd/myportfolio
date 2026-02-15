@@ -195,3 +195,20 @@ function toggleProjects() {
         document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+function themeFunction() {
+    const body = document.body;
+    const themeButton = document.getElementById("theme-button");
+
+    // Toggle the dark-theme class on the body
+    body.classList.toggle("dark-theme");
+
+    // Change icon based on the current theme
+    if (body.classList.contains("dark-theme")) {
+        themeButton.classList.replace("uil-moon", "uil-sun");
+        themeButton.style.color = "#ffba08"; // Change icon color to gold/yellow
+    } else {
+        themeButton.classList.replace("uil-sun", "uil-moon");
+        themeButton.style.color = "black";
+    }
+}

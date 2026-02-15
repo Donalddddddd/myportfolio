@@ -115,6 +115,41 @@ nav{
     font-size: 28px;
     cursor: pointer;
 }
+/* --- DARK MODE VARIABLES --- */
+.dark-theme {
+    --body-color: #121212;
+    --color-white: #1e1e1e;
+    --text-color-second: #e0e0e0; /* Light grey for text */
+    --text-color-third: #ffba08;
+    --first-shadow-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Specific overrides for dark mode elements */
+.dark-theme .nav-name, 
+.dark-theme .project-info p,
+.dark-theme .about-info p {
+    color: #b0b0b0;
+}
+
+.dark-theme nav, 
+.dark-theme .about-info, 
+.dark-theme .project-box, 
+.dark-theme .project-card {
+    background: #1e1e1e;
+    box-shadow: 1px 8px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .input-field, 
+.dark-theme textarea {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+.dark-theme .btn {
+    background: #333;
+    color: white;
+}
 .wrapper{
     padding-inline: 10vw;
 }
