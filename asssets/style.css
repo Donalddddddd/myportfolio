@@ -186,6 +186,14 @@ nav{
 .icon:hover{
     color: var(--first-color);
 }
+.icon-link {
+    text-decoration: none;
+    color: inherit; 
+    display: flex;
+}
+.icon-link:hover .icon {
+    color: var(--first-color);
+}
 .featured-image{
     display: flex;
     justify-content: right;
