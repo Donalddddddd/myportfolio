@@ -639,12 +639,6 @@ footer{
 
 
 
-
-
-
-
-
-
 @media only screen and (max-width: 1024px){
     .featured-text{
         padding: 0;
@@ -669,7 +663,6 @@ footer{
     .nav-menu{
         position: fixed;
         top: 70px;
-        right: -100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
