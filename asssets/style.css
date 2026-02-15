@@ -478,6 +478,12 @@ h3{
     border: none;
     outline: none;
 }
+hidden-project {
+    display: none;
+}
+.projects-container {
+    transition: all 0.5s ease;
+}
 .project-card {
     display: flex;
     background: var(--color-white);

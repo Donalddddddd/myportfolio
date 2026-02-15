@@ -174,3 +174,24 @@ function scrollActive() {
   })
 }
 window.addEventListener('scroll', scrollActive)
+
+function toggleProjects() {
+    const hiddenProjects = document.querySelectorAll('.hidden-project');
+    const btn = document.getElementById('toggleProjectsBtn');
+    
+    // Check if we are currently showing or hiding
+    if (btn.innerText === "Show More") {
+        hiddenProjects.forEach(project => {
+            project.style.display = "block";
+        });
+        btn.innerText = "Show Less";
+    } else {
+        hiddenProjects.forEach(project => {
+            project.style.display = "none";
+        });
+        btn.innerText = "Show More";
+        
+        // Optional: Scroll back up to the project section when hiding
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+    }
+}
