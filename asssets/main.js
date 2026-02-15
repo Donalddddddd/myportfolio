@@ -24,7 +24,7 @@ function headerShadow(){
         navHeader.style.background = "linear-gradient(to bottom,rgb(220, 46, 2),rgb(222, 56, 1),rgb(225, 68, 1),rgb(227, 76, 1),rgb(229, 81, 2),rgb(231, 89, 1),rgb(233, 98, 1),rgb(235, 107, 2),rgb(237, 115, 1),rgb(240, 124, 1),rgb(242, 130, 3),rgb(244, 141, 6))";
         navHeader.style.transition = ".8s ease";
 
-        navMenu.style.background = " linear-gradient(to bottom,rgb(220, 46, 2),rgb(222, 56, 1),rgb(225, 68, 1),rgb(227, 76, 1),rgb(229, 81, 2),rgb(231, 89, 1),rgb(233, 98, 1),rgb(235, 107, 2),rgb(237, 115, 1),rgb(240, 124, 1),rgb(242, 130, 3),rgb(244, 141, 6))";
+ 
 
         navLogo.style.color = "rgb(250, 250, 250)";
   
