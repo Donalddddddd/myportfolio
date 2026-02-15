@@ -30,7 +30,7 @@ function headerShadow(){
   
 
         navLinks.forEach(link => {
-            link.style.color = "rgb(250, 250, 250)"; 
+             
             link.style.transition = "color 0.3s ease";
             
         });
