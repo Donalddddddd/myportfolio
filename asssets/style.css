@@ -394,7 +394,7 @@ nav.scrolled {
 }
 .floating-tag i { color: var(--accent); font-size: 14px; }
 .tag-1 { bottom: 14%; left: -8%; animation-delay: 0s; }
-.tag-2 { top: -14%; right: -1%; animation-delay: 1.5s; }
+.tag-2 { top: -14%; right: 8%; animation-delay: 1.5s; }
 @keyframes tagFloat {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
