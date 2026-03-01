@@ -394,7 +394,7 @@ nav.scrolled {
 }
 .floating-tag i { color: var(--accent); font-size: 14px; }
 .tag-1 { bottom: 14%; left: -8%; animation-delay: 0s; }
-.tag-2 { top: 8%; right: -1%; animation-delay: 1.5s; }
+.tag-2 { top: 16%; right: -1%; animation-delay: 1.5s; }
 @keyframes tagFloat {
     0%,100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
@@ -529,9 +529,9 @@ nav.scrolled {
     opacity: 0;
 }
 
-.skill-per.html       { width: 80%; animation-delay: 0.1s; }
-.skill-per.css        { width: 80%; animation-delay: 0.2s; }
-.skill-per.javascript { width: 70%; animation-delay: 0.3s; }
+.skill-per.html       { width: 90%; animation-delay: 0.1s; }
+.skill-per.css        { width: 90%; animation-delay: 0.2s; }
+.skill-per.javascript { width: 90%; animation-delay: 0.3s; }
 .skill-per.Bootstrap  { width: 70%; animation-delay: 0.4s; }
 .skill-per.php        { width: 80%; animation-delay: 0.1s; }
 .skill-per.java       { width: 50%; animation-delay: 0.2s; }
