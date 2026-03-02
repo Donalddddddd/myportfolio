@@ -478,64 +478,86 @@ nav.scrolled {
     gap: 2rem;
 }
 
-/* ---- SKILLS — PILL ICON GRID ---- */
-.skill-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+.skill {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
 }
+.skill:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 
-.skill-pill {
-    display: inline-flex;
+.skills-header {
+    display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 18px;
-    background: var(--bg-card);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-pill);
-    font-family: var(--font-display);
-    font-size: 0.88rem;
+    margin-bottom: 1.75rem;
+}
+.skill-icon { font-size: 22px; color: var(--accent); }
+.skills-header h3 { margin: 0; font-size: 1.05rem; }
+
+.skill-box { margin-bottom: 1.1rem; }
+
+.skill-box .title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
     font-weight: 600;
-    color: var(--text-primary);
-    box-shadow: var(--shadow-sm);
-    cursor: default;
-    transition: all var(--t-med) var(--ease);
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+}
+
+.skill-bar {
+    height: 6px;
+    width: 100%;
+    border-radius: var(--radius-pill);
+    background: var(--border);
+    overflow: visible;
     position: relative;
-    overflow: hidden;
 }
-.skill-pill::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--accent), var(--accent-gold));
+
+.skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--accent), var(--accent-gold));
+    animation: progress 1s var(--ease) forwards;
     opacity: 0;
-    transition: opacity var(--t-med) var(--ease);
-    z-index: 0;
 }
-.skill-pill:hover {
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+
+.skill-per.html       { width: 90%; animation-delay: 0.1s; }
+.skill-per.css        { width: 90%; animation-delay: 0.2s; }
+.skill-per.javascript { width: 90%; animation-delay: 0.3s; }
+.skill-per.Bootstrap  { width: 70%; animation-delay: 0.4s; }
+.skill-per.php        { width: 80%; animation-delay: 0.1s; }
+.skill-per.java       { width: 50%; animation-delay: 0.2s; }
+.skill-per.python     { width: 70%; animation-delay: 0.3s; }
+.skill-per.c          { width: 60%; animation-delay: 0.4s; }
+.skill-per.mysql      { width: 80%; animation-delay: 0.1s; }
+.skill-per.mssql      { width: 70%; animation-delay: 0.2s; }
+.skill-per.mongodb    { width: 50%; animation-delay: 0.3s; }
+
+@keyframes progress {
+    from { width: 0; opacity: 1; }
+    to   { opacity: 1; }
+}
+
+.skill-per .tooltip {
+    position: absolute;
+    right: -1px;
+    top: -28px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    font-family: var(--font-display);
     color: #fff;
+    background: var(--accent);
+    padding: 2px 7px;
+    border-radius: var(--radius-pill);
 }
-.skill-pill:hover::before { opacity: 1; }
-.skill-pill:hover .pill-icon { filter: brightness(10); }
-
-.skill-pill > * { position: relative; z-index: 1; }
-
-.pill-icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    transition: filter var(--t-med) var(--ease);
-}
-
-.pill-icon-fa {
-    font-size: 18px;
-    color: var(--accent);
-    transition: color var(--t-med) var(--ease);
-}
-.skill-pill:hover .pill-icon-fa { color: #fff; }
 
 /* ---- PROJECT STATS ---- */
 .project-stats {
@@ -829,7 +851,7 @@ footer {
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1024px) {
-    .skill-pills { gap: 0.6rem; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
     .image, .image img { width: 320px; height: 320px; }
     .image-ring { width: 320px; height: 320px; }
     .tag-1, .tag-2 { display: none; }
@@ -876,7 +898,7 @@ footer {
     .about-image { width: 100%; justify-content: center; }
     .image-about { width: 100%; height: 300px; }
 
-    .skill-pills { gap: 0.5rem; }
+    .skills-grid { grid-template-columns: 1fr; }
     .project-stats { grid-template-columns: 1fr; }
     .project-card { flex-direction: column; }
     .project-carousel { width: 100%; min-height: 260px; }
